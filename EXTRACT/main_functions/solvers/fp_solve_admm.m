@@ -1,3 +1,7 @@
+% #ADenman:
+%    This function accounts for nearly half of compute time and should be examined for possible optimizations.
+%    Some low hanging fruit: This function uses nested subfunctions (nested = the inner function is BEFORE the main function's "end").
+%    Nexted functions have worse performance than local functions (put function declaration AFTER main function END and pass all values as arguments)
 function [X2,loss] = fp_solve_admm(X, A, B, mask, lambda, kappa, nIter, ...
         tol, compute_loss, use_gpu, transpose_B)
 % Solve for X using fixed point algorithm inside fast-ADMM routine
