@@ -1,3 +1,5 @@
+% #ADenman:
+%    This file is another significant contributor to total runtime
 function [X2,loss] = fp_solve_adaptive(X, A, B, mask, lambda, noise_std,...
         nIter, tol, compute_loss, use_gpu, transpose_B)
 % Solve for X using fixed point algorithm inside ADMM routine
